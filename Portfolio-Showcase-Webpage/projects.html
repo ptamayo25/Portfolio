@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priscilla Tamayo's Projects</title>
+    <style>
+        .nav-menu{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+        .nav-item{
+            float: left; /*Horizontal items */
+        }
+        .nav-link {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            background-color: #ddd; /*Gray on hover*/
+            color: black;
+        }
+        /*Responsive Styles (for smaller screens)*/
+        @media screen and (max-width: 600px) {
+            .nav-item {
+                float: none; /* Stack items vertically */
+                display: block; /* Stack items vertically */
+            }
+        }
+
+        /*Hidden by default*/
+        .modal{
+            display: none; /*Hides modal by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+        }
+        .closeModal {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .closeModal:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .carousel-container {
+            width: 500px;
+            margin: auto;
+            position: relative;
+        }
+
+        .carousel-slide, .carousel-slide2 {
+            display: none; /*Hide all slides initially*/
+        }
+
+        .carousel-slide img, .carousel-slide2 img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transform: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .dot-container {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .dot, .dot2 {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }   
+        
+        .active, .dot:hover, .dot2:hover {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+    <h1>Priscilla Tamayo's Portfolio</h1>
+    <ul class="nav-menu">
+         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+         <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+    <h2>Projects</h2>
+        <div>
+            <h4>Project 1</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere illo iure obcaecati quidem quia dicta laborum tenetur placeat impedit hic. Veniam nostrum asperiores natus maiores odit reprehenderit odio modi fugit?</p>
+            <button id="openProj1Modal">View Details</button>
+            <button onclick="location.href='https://github.com/ptamayo25'">Visit Project</button>
+        </div>
+        <div id="project1Modal" class="modal">
+            <div class="modal-content">
+                <span class="closeModal">&times;</span>
+                <p>This Project features Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia tempora unde quo asperiores, nostrum quia pariatur et, culpa, quae alias ducimus nisi beatae facilis quas suscipit! Qui dolor eligendi est!</p>
+                <div class="carousel-container">
+                    <div class="carousel-slide fade">
+                        <img src="https://media.istockphoto.com/id/1458688526/photo/a-black-toy-poodle-in-a-field-against-a-sandy-field-and-a-blue-sky.jpg?s=612x612&w=0&k=20&c=QOhbtyvBmTBmrR8v7USuAAZTPMaTChUqiV5bA9qR4MA=" alt="Image 1">
+                    </div>
+                    <div class="carousel-slide fade">
+                        <img src="https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-512630175-e1692383207927.jpg" alt="Image 2">
+                    </div>
+                    <div class="carousel-slide fade">
+                        <img src="https://media-be.chewy.com/wp-content/uploads/schnoodle-620x403-shutterstock-145124305-copy.jpg" alt="Image 3">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095</a>
+            
+                    <div class="dot-container">
+                        <span class="dot" onclick="currenSlide(1)"></span>
+                        <span class="dot" onclick="currenSlide(2)"></span>
+                        <span class="dot" onclick="currenSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4>Project 2</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, vel earum. Architecto quaerat qui porro similique laborum pariatur odit, voluptatem perferendis inventore dolores consequuntur autem enim? Non esse numquam facere!</p>
+            <button id="openProj2Modal">View Details</button>
+            <button onclick="location.href='https://github.com/ptamayo25'">Visit Project</button>
+        </div>
+        <div id="project2Modal" class="modal">
+            <div class="modal-content">
+                <span class="closeModal">&times;</span>
+                <p>This Project features Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia tempora unde quo asperiores, nostrum quia pariatur et, culpa, quae alias ducimus nisi beatae facilis quas suscipit! Qui dolor eligendi est!</p>
+                <div class="carousel-container">
+                    <div class="carousel-slide2 fade">
+                        <img src="https://us.feliway.com/cdn/shop/articles/10_fascinating_facts_about_black_cats-3.jpg?v=1712147891" alt="Image 1">
+                    </div>
+                    <div class="carousel-slide2 fade">
+                        <img src="https://www.foundanimals.org/wp-content/uploads/2023/02/twenty20_b4e89a76-af70-4567-b92a-9c3bbf335cb3.jpg" alt="Image 2">
+                    </div>
+                    <div class="carousel-slide2 fade">
+                        <img src="https://www.wfla.com/wp-content/uploads/sites/71/2021/10/Black-Cat-2.jpg?w=1280" alt="Image 3">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095</a>
+            
+                    <div class="dot-container">
+                        <span class="dot2" onclick="currenSlide(1)"></span>
+                        <span class="dot2" onclick="currenSlide(2)"></span>
+                        <span class="dot2" onclick="currenSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script>
+     //Get the modal
+    var modal1 = document.getElementById("project1Modal");
+    var modal2 = document.getElementById("project2Modal");
+    //Get the button that opens the modal
+    var btn1 = document.getElementById("openProj1Modal");
+    var btn2 = document.getElementById("openProj2Modal");
+    //Get the <span> element that closes the modal
+    var span1 = document.getElementsByClassName("closeModal")[0]; //Since there can be multiple elements with the same class document.getElementsByClassName(class) returns an array of element so need to use [0] to get the item
+    var span2 = document.getElementsByClassName("closeModal")[1];
+    //When the user clicks the butoon, opwn the modal
+    btn1.onclick = function() {
+    modal1.style.display = "block";
+    }
+    btn2.onclick = function() {
+    modal2.style.display = "block";
+    }
+
+    //When user clicks on <span> (x), close the modal
+    span1.onclick = function(){
+        modal1.style.display = "none";
+    }
+    span2.onclick = function(){
+        modal2.style.display = "none";
+    }
+    //When the user clicks anywhere outside the modal, close the modal
+    window.onclick = function(event){
+    if (event.target == modal1 || event.target == modal2){
+        modal1.style.display = "none"
+        modal2.style.display = "none"
+    } 
+    }
+    var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currenSlide(n) {
+            showSlides(slideIndex = n)
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("carousel-slide")
+            var slides2 = document.getElementsByClassName("carousel-slide2")
+            var dots = document.getElementsByClassName("dot");
+            var dots2 = document.getElementsByClassName("dot2");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; 
+                slides2[i].style.display = "none"; 
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active","")
+                dots2[i].className = dots2[i].className.replace(" active","")   
+            }
+            slides[slideIndex-1].style.display = "block"
+            slides2[slideIndex-1].style.display = "block"
+            dots[slideIndex-1].className += " active"
+            dots2[slideIndex-1].className += " active"
+        }
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priscilla Tamayo's Portfolio</title>
+    <style>
+        .nav-menu{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+        .nav-item{
+            float: left; /*Horizontal items */
+        }
+        .nav-link {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            background-color: #ddd; /*Gray on hover*/
+            color: black;
+        }
+        /*Responsive Styles (for smaller screens)*/
+        @media screen and (max-width: 600px) {
+            .nav-item {
+                float: none; /* Stack items vertically */
+                display: block; /* Stack items vertically */
+            }
+        }
+    </style>
+</head>
+<body>
+   <h1>Priscilla Tamayo's Portfolio</h1>
+   <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+   </ul>
+   <section>
+    <h2>Home</h2>
+    <h3>Hi, I'm Priscilla - A Web Developer</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus dolor, labore numquam doloremque veritatis 
+        adipisci id eveniet perferendis aspernatur voluptate rerum nihil facere alias, dolorum vero laudantium esse consequuntur totam. Lorem ipsum dolor 
+        sit amet consectetur adipisicing elit. Et maxime numquam aut ab aliquam dolore deserunt ut accusamus dolor quam expedita minima asperiores voluptatem, 
+        veniam non quae recusandae praesentium dolorum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio ipsa aliquid quod odit, molestias saepe,
+         provident distinctio voluptatem molestiae excepturi repellat officia fuga eveniet quibusdam autem nostrum sint accusamus rem? Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Sed rem sint deserunt fuga quaerat nostrum est labore. Qui praesentium saepe ab excepturi eos, iure omnis, sed eveniet quas quidem porro.</p>
+    <button onclick="location.href='projects.html'">View All My Projects</button>
+    <button onclick="location.href='contact.html'">Get In Touch</button>
+   </section>
+   
+   <script>
+   </script>
+
+</body>
+</html>
